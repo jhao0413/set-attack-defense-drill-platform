@@ -30,5 +30,6 @@
 
 <style lang="less" scoped>
 .el-menu{
+    width: 100%;
 }
 </style>
