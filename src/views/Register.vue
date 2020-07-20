@@ -4,22 +4,26 @@
             <el-col :span="12" class="left"><img src="../assets/img/ctf.png" alt=""></el-col>
             <el-col :span="12" class="right">
                 <div class="login">
-                    <h2 class="login-title">用户登录</h2>
+                    <h2 class="login-title">用户注册</h2>
                     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
                         class="demo-ruleForm">
                         <el-form-item prop="text">
-                            <el-input type="text" v-model="ruleForm.user" autocomplete="off" placeholder="请输入账号/邮箱"></el-input>
+                            <el-input type="text" v-model="ruleForm.user" autocomplete="off" placeholder="请输入账号">
+                            </el-input>
+                        </el-form-item>
+                        <el-form-item prop="text">
+                            <el-input type="text" v-model="ruleForm.user" autocomplete="off" placeholder="请输入邮箱">
+                            </el-input>
                         </el-form-item>
                         <el-form-item prop="pass">
-                            <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="请输入密码"></el-input>
+                            <el-input type="password" v-model="ruleForm.pass" autocomplete="off"  placeholder="请输入密码"></el-input>
                         </el-form-item>
-                        <el-form-item style="margin-bottom:10px;">
-                            <el-input type="text" v-model="ruleForm.code" autocomplete="off" placeholder="请输入验证码" style="width:60%; float:left"></el-input>
-                            <img src="../assets/img/code.jpg" alt="" style="float:left; width:30%; margin:3px 5%">
+                        <el-form-item prop="checkPass">
+                            <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"  placeholder="请再次输入密码"></el-input>
                         </el-form-item>
-                        <div style="width:100%;text-align:right;margin-right:30px;line-height:40px;"><h5 style="margin-right:50px">没有账号？现在注册</h5></div>
                         <el-form-item>
-                            <el-button type="primary" @click="submitForm('ruleForm')" style="width:300px;">登录</el-button>
+                            <el-button type="primary" @click="submitForm('ruleForm')" style="width:300px;">注册
+                            </el-button>
                         </el-form-item>
                     </el-form>
                 </div>
@@ -48,22 +52,22 @@
 
     .login {
         width: 430px;
-        height: 430px;
+        height: 480px;
         background: #FFFFFF;
         box-shadow: 0 0 3px #bbb;
         border-radius: 20px;
         margin: 140px auto;
     }
 
-    .login-title{
+    .login-title {
         line-height: 100px;
     }
 
-    .el-form-item{
+    .el-form-item {
         margin-bottom: 40px;
     }
 
-    .demo-ruleForm >>> .el-form-item__content{
+    .demo-ruleForm>>>.el-form-item__content {
         margin: 0 50px !important;
     }
 </style>
@@ -116,8 +120,10 @@
             };
             return {
                 ruleForm: {
+                    user: '',
                     pass: '',
-                    code: ''
+                    checkPass: '',
+                    age: ''
                 },
                 rules: {
                     pass: [{
