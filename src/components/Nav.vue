@@ -3,7 +3,7 @@
         <el-row class="nav">
             <el-col :span="14">
                 <div>
-                    <h3 class="title">SET-Attack-Defense-Drill-Platform</h3>
+                    <h3 class="title">“知行”网络空间安全人才培养体系</h3>
                 </div>
             </el-col>
             <el-col :span="10">
@@ -52,5 +52,9 @@
 
     .title {
         line-height: 60px;
+    }
+
+    .text{
+        text-decoration: none;
     }
 </style>

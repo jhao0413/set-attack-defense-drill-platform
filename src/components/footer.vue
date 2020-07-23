@@ -2,8 +2,8 @@
     <el-row class="footer">
         <el-col :span="16" :offset="4">
             <el-col class="footer-title" :span="17">
-                <h2>“天狩”及时演练对战平台</h2>
-                <el-col :span="4"><router-link to="/about/content" class="text">关于“天狩”</router-link></el-col>
+                <h2>“知行”网络空间安全人才培养体系</h2>
+                <el-col :span="4"><router-link to="/about/content" class="text">关于“知行”</router-link></el-col>
                 <el-col :span="4">关于学院</el-col>
                 <el-col :span="4">讲师招募</el-col>
                 <el-col :span="4">用户协议</el-col>
